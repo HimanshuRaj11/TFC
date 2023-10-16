@@ -1,0 +1,76 @@
+.menu-card {
+    border: 1px solid #fff;
+    border-radius: 9px;
+    margin: 15px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        -webkit-box-shadow: 9px 9px 14px -6px rgba(74, 72, 74, 1);
+        -moz-box-shadow: 9px 9px 14px -6px rgba(74, 72, 74, 1);
+        box-shadow: 9px 9px 14px -6px rgba(74, 72, 74, 1);
+        transform: scale(1.06);
+    }
+
+    .img {
+        width: 20em;
+        height: 14em;
+        position: relative;
+        object-fit: fill;
+
+        img {
+            width: 20em;
+        }
+
+        .rates {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f1eeee62;
+            padding: 3px 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            h3 {
+                margin: 0 5px;
+            }
+            .star {
+                color: gold;
+                font-size: 26px;
+            }
+        }
+        .special-offer {
+            background-color: var(--green-color);
+            position: absolute;
+            color: #fff;
+            bottom: -11px;
+            right: 0;
+            padding: 3px 10px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+    }
+
+    .details {
+        width: 20em;
+        height: 5em;
+        h2 {
+            margin: 0 10px;
+        }
+        .p {
+            margin: 0 10px;
+            justify-content: space-between;
+            span {
+                font-size: 18px;
+            }
+            .current-price {
+                margin: 0 5px;
+            }
+            .realPrice {
+                color: #928f8f;
+            }
+
+            .disc {
+                color: var(--green-color);
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.Menu {
+  width: 100%;
+  margin-top: 100px;
+}
+.Menu .topHead {
+  width: 100%;
+  height: 50px;
+}
+.Menu .topHead input {
+  padding: 5px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  margin: 0 20px;
+  border-radius: 10px;
+}
+.Menu .topHead #course-type {
+  margin: 0 15px;
+  padding: 5px;
+  font-size: 20px;
+  width: 10em;
+  transition: all 1s ease-in;
+  border-radius: 15px;
+}
+.Menu .menus {
+  margin-top: 30px;
+}/*# sourceMappingURL=Menu.css.map */

@@ -1,0 +1,161 @@
+.Home {
+  width: 100%;
+  height: 100vh;
+  background: url(https://img.freepik.com/premium-photo/photo-closeup-shot-delicious-food_829042-89.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  left: 0;
+}
+.Home .home-container1 {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.225);
+  height: 100vh;
+}
+.Home .home-container1 h2,
+.Home .home-container1 h1 {
+  margin: 5px 120px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Home .home-container1 h2 {
+  color: var(--p-color);
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.7333333333);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 12px;
+  border-radius: 8px;
+}
+.Home .home-container1 h1 {
+  color: #fff;
+  font-size: 70px;
+}
+
+.home-container2 {
+  width: 100%;
+  height: auto;
+  margin-top: 150px;
+}
+.home-container2 .cont2-text {
+  width: 50%;
+  height: 35em;
+}
+.home-container2 .cont2-text .head {
+  width: 100%;
+  margin: 15px 0;
+}
+.home-container2 .cont2-text .head h1 {
+  font-size: 50px;
+  padding: 20px;
+  text-align: center;
+}
+.home-container2 .cont2-text .detail {
+  padding: 0 20px;
+}
+.home-container2 .cont2-text .detail p {
+  color: #585858;
+  padding: 20px;
+  text-align: justify;
+}
+.home-container2 .cont2-text .serv {
+  width: 100%;
+  margin: 20px 0;
+}
+.home-container2 .cont2-text .serv .list {
+  width: 18em;
+  height: 4em;
+  cursor: pointer;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.home-container2 .cont2-text .serv .list .list-icon {
+  width: 20%;
+  height: 100%;
+}
+.home-container2 .cont2-text .serv .list .list-text {
+  text-align: center;
+}
+.home-container2 .cont2-img {
+  width: 35%;
+  height: 35em;
+  overflow: hidden;
+  border-radius: 10px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.home-container2 .cont2-img img {
+  height: 35em;
+}
+
+.container3 {
+  margin: 50px 0;
+  width: 100%;
+}
+.container3 .top-menu .head {
+  width: 60em;
+}
+.container3 .top-menu .head h1 {
+  font-size: 70px;
+  text-align: center;
+}
+.container3 .top-menu .head h3 {
+  border-bottom: 3px solid var(--p-color);
+}
+.container3 .top-menu .types {
+  margin: 30px 0;
+}
+.container3 .top-menu .types span {
+  cursor: pointer;
+  margin: 10px 20px;
+  padding: 10px;
+  border-radius: 9px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  border: 2px solid var(--p-color);
+}
+.container3 .top-menu .types .active {
+  background-color: var(--p-color);
+  color: #fff;
+}
+.container3 .top-menu .topR-menu {
+  width: 90%;
+}
+.container3 .all-menu {
+  margin: 20px 0;
+}
+.container3 .all-menu a {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--p-color);
+  color: #fff;
+  align-self: center;
+}
+.container3 .all-menu a .arrow-icon {
+  font-size: 26px;
+}
+
+.container4 {
+  margin: 30px 0;
+  width: 100%;
+  height: 70vh;
+}
+.container4 .contain4 {
+  height: 70vh;
+  width: 90%;
+  background-image: url("https://media.istockphoto.com/id/880200850/photo/glass-of-wine-at-dining-table.webp?b=1&s=170667a&w=0&k=20&c=4e36K8kiV_7REDpx-krvEQjBAqLzPDt62VqLxHjf8lY=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+.container4 .contain4 .book-a-table {
+  background-color: var(--p-color);
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+.container4 .contain4 .book-a-table h1 {
+  color: #fff;
+}/*# sourceMappingURL=Home.css.map */

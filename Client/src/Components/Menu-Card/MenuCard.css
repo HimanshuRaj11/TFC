@@ -1,0 +1,70 @@
+.menu-card {
+  border: 1px solid #fff;
+  border-radius: 9px;
+  margin: 15px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.menu-card:hover {
+  box-shadow: 9px 9px 14px -6px rgb(74, 72, 74);
+  transform: scale(1.06);
+}
+.menu-card .img {
+  width: 20em;
+  height: 14em;
+  position: relative;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.menu-card .img img {
+  width: 20em;
+}
+.menu-card .img .rates {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(241, 238, 238, 0.3843137255);
+  padding: 3px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.menu-card .img .rates h3 {
+  margin: 0 5px;
+}
+.menu-card .img .rates .star {
+  color: gold;
+  font-size: 26px;
+}
+.menu-card .img .special-offer {
+  background-color: var(--green-color);
+  position: absolute;
+  color: #fff;
+  bottom: -11px;
+  right: 0;
+  padding: 3px 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.menu-card .details {
+  width: 20em;
+  height: 5em;
+}
+.menu-card .details h2 {
+  margin: 0 10px;
+}
+.menu-card .details .p {
+  margin: 0 10px;
+  justify-content: space-between;
+}
+.menu-card .details .p span {
+  font-size: 18px;
+}
+.menu-card .details .p .current-price {
+  margin: 0 5px;
+}
+.menu-card .details .p .realPrice {
+  color: #928f8f;
+}
+.menu-card .details .p .disc {
+  color: var(--green-color);
+}/*# sourceMappingURL=MenuCard.css.map */

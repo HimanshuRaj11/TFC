@@ -1,0 +1,113 @@
+.BookATable {
+  width: 100%;
+  margin-top: 70px;
+}
+.BookATable .filter-bar {
+  margin: 15px 0;
+  height: 3em;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.BookATable .tableDesine {
+  width: 90%;
+}
+.BookATable .tableDesine .room {
+  width: 90%;
+  height: 30em;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+.BookATable .tableDesine .room .door {
+  height: 10em;
+  width: 10px;
+  background-color: var(--bg-color);
+}
+.BookATable .tableDesine .room .reception {
+  width: 30%;
+  height: 30em;
+  position: relative;
+}
+.BookATable .tableDesine .room .reception .r-counter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10em;
+  border-top-right-radius: 50px;
+  width: 90%;
+  background-color: var(--bg-color);
+}
+.BookATable .tableDesine .room .tables {
+  width: 68%;
+  height: 30em;
+}
+.BookATable .tableDesine .room .tables .row {
+  width: 100%;
+  height: 30em;
+  justify-content: space-between;
+}
+.BookATable .tableDesine .room .tables .row .chairs {
+  height: 12em;
+  width: 30%;
+  justify-content: space-around;
+}
+.BookATable .tableDesine .room .tables .row .chairs .c-icon {
+  font-size: 40px;
+}
+.BookATable .tableDesine .room .tables .row .chairs .left-c {
+  transform: rotate(270deg);
+}
+.BookATable .tableDesine .room .tables .row .chairs .right-c {
+  transform: rotate(90deg);
+}
+.BookATable .tableDesine .room .tables .row .col1 {
+  height: 12em;
+  width: 98%;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.BookATable .tableDesine .room .tables .row .col1 .table {
+  width: 38%;
+  height: 12em;
+}
+.BookATable .tableDesine .room .tables .row .col1 .table .shape-T {
+  width: 98%;
+  background-color: var(--bg-color);
+  height: 9em;
+  border-radius: 10px;
+}
+.BookATable .tableDesine .room .tables .row .col2 {
+  cursor: pointer;
+  height: 8em;
+  width: 98%;
+}
+.BookATable .tableDesine .room .tables .row .col2 .table {
+  width: 38%;
+  height: 8em;
+}
+.BookATable .tableDesine .room .tables .row .col2 .table .shape-T {
+  width: 98%;
+  background-color: var(--bg-color);
+  height: 6em;
+  border-radius: 10px;
+}
+
+.TableBookPop {
+  z-index: 999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.0941176471);
+  height: 100vh;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.TableBookPop .bookTablecont {
+  border-radius: 12px;
+  background-color: var(--bg-color);
+  width: 50%;
+  height: 90vh;
+  box-shadow: 10px 10px 15px -6px rgba(0, 0, 0, 0.75);
+}/*# sourceMappingURL=BookATable.css.map */

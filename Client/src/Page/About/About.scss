@@ -1,0 +1,73 @@
+.About {
+    width: 100%;
+
+    .container1 {
+        margin-top: 100px;
+        width: 90%;
+        height: 29em;
+        background-image: url(https://img.freepik.com/premium-photo/wooden-table-front-abstract-blurred-restaurant-lights-background_688350-4007.jpg?);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+
+        h1{
+            word-spacing: 10px;
+            font-size: 80px;
+            color: #fff;
+        }
+    }
+
+    .container2{
+        width: 90%;
+        padding: 30px 0;
+
+        .img,.about-details{
+            // height: 30em;
+            min-height: 30em;
+            max-height: 35em;
+        }
+        .img{
+            overflow: hidden;
+            border-radius: 20px;
+            width: 40%;
+            object-fit: contain;
+
+            img{
+                width: 100%;
+                height: 40em;
+            }
+        }
+        .about-details{
+            width: 50%;
+            padding: 20px 0 0 40px;
+            h3{
+                color: var(--p-color);
+            }
+            h1{
+                font-size: 60px;
+                margin: 20px 0;
+            }
+            p{
+                line-height: 20px;
+                text-align: justify;
+            }
+
+        }
+
+    }
+
+    .container3{
+
+        a{
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: var(--p-color);
+            color: #fff;
+            align-self: center;
+
+            .arrow-icon{
+                font-size: 26px;
+            }
+        }
+    }
+}
