@@ -2,13 +2,25 @@ const mongoose = require("mongoose")
 const schema = mongoose.Schema;
 const DishesSchema = new mongoose.Schema({
 
-    title:{type: string, required: true},
-    description:{type: string, required: true},
-    price:{type: Number, required: true},
+    dish_Name:{type: String, require: true},
+    description:{type: String, require: true},
+    price:{type: Number, require: true},
     discount_percent:{type: Number},
     discount_amount:{type: Number},
-    image:{type: string, required: true},
-    type:{type: schema.Types.ObjectId, ref: 'Menu'}
+    // image:{type: String, require: true},
+    category:{type: schema.Types.ObjectId, ref: 'Menu'},
+    Ingredients:{type:String},
+    Cuisine:{type:String},
+    
+    Ratings:{type:Number},
+    Reviews:[{
+        people:{type:String, require:true},
+        rating:{type:Number, require:true},
+        comment:{type:String, require:true},
+        time : { type : Date, default: Date.now() }
+    }],
+
+
 
 })
 
