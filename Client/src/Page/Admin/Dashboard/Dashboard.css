@@ -1,0 +1,9 @@
+.dashboard {
+  margin-top: 70px;
+  width: 100%;
+}
+.dashboard .Add-btn {
+  background-color: orangered;
+  padding: 5px;
+  font-weight: 600;
+}/*# sourceMappingURL=Dashboard.css.map */

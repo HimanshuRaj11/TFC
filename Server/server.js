@@ -31,7 +31,7 @@ app.use("/category/", CategoryRouter)
 const DishesRouter = require("./Routes/Dishes.route");
 app.use("/dish", DishesRouter)
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log(`Server is Running on port: ${port}`);
 });
