@@ -137,10 +137,10 @@ const AddDish = () => {
             placeholder="Cuisine i.e Country"
           />
           <label htmlFor="isVej">IsVej
-          <input type="checkbox" name="isVej" checked={checkBox.isVej} onClick={handelCheck}/>
+          <input type="checkbox" name="isVej" checked={checkBox.isVej} onClick={handelCheck} onChange={handelCheck}/>
           </label>
           <label htmlFor="inStock">InStock
-          <input type="checkbox" name="inStock" checked={checkBox.inStock} onClick={handelCheck}/>
+          <input type="checkbox" name="inStock" checked={checkBox.inStock} onClick={handelCheck} onChange={handelCheck}/>
           </label>
         </div>
       </div>

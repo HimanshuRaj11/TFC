@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+
 const corsOptions = {
   origin: process.env.CLIENT_URL,
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
@@ -31,7 +32,7 @@ app.use("/category/", CategoryRouter)
 const DishesRouter = require("./Routes/Dishes.route");
 app.use("/dish", DishesRouter)
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server is Running on port: ${port}`);
 });

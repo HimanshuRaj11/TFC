@@ -55,7 +55,7 @@ exports.fetchAllDishes = async(req,res)=>{
 }
 exports.fetchCategoryDishes = async(req, res)=>{
     try{
-        const {category} = req.body;
+        const {category} = req.params;
         await Dishes.find({category}).then((dishes)=>{
             return res.status(201).json({dishes})
         })

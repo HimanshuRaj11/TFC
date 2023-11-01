@@ -7,6 +7,7 @@ export const DishSlice = createSlice({
     Dishes: [],
     loading: false,
   },
+   reducers:{ },
   extraReducers: (builder) => {
     builder
       .addCase(fetchAllDishes.pending, (state) => {
@@ -19,17 +20,16 @@ export const DishSlice = createSlice({
       .addCase(fetchAllDishes.rejected, (state) => {
         state.loading = false;
       })
-      
-    //   .addCase(fetchCategoryDishes.pending, (state) => {
-    //     state.loading = true;
-    //   })
+      // .addCase(fetchCategoryDishes.pending, (state) => {
+      //   state.loading = true;
+      // })
       // .addCase(fetchCategoryDishes.fulfilled, (state, action) => {
       //   state.loading = false;
       //   state.Dishes = action.payload;
       // })
-    //   .addCase(fetchCategoryDishes.rejected, (state) => {
-    //     state.loading = false;
-    //   })
+      // .addCase(fetchCategoryDishes.rejected, (state) => {
+      //   state.loading = false;
+      // })
   },
 });
 
@@ -44,8 +44,9 @@ export const fetchAllDishes = createAsyncThunk("/fetchAll/dishes", async () => {
 });
 export const fetchCategoryDishes = createAsyncThunk("/fetchAll/dishes", async ({category}) => {
   try {
-    const res = await axios.get("http://localhost:8000/dish/fetchCategoryDishes");
+    const res = await axios.get(`http://localhost:8000/dish/fetchCategoryDishes/${category}`);
     const data = res.data;
+   
     return data;
   } catch (error) {
     return error;
