@@ -1,10 +1,12 @@
 import "./BookATable.css";
 import { FaChair } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import {DatePickerComponent} from '@syncfusion/ej2-react-calendars'
 
 const BookATable = () => {
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className="BookATable center column">
      <div className="center filter-bar">

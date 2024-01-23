@@ -1,0 +1,226 @@
+.itemDetailsPage {
+  width: 100%;
+  margin-top: 72px;
+  position: relative;
+}
+.itemDetailsPage path, .itemDetailsPage a, .itemDetailsPage svg {
+  cursor: pointer;
+}
+.itemDetailsPage .edit {
+  display: flex;
+  float: right;
+  background-color: rgba(168, 166, 166, 0.7725490196);
+  padding: 3px;
+  border-radius: 4px;
+  border: 1px solid rgb(90, 89, 89);
+  position: absolute;
+  font-size: 25px;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+}
+.itemDetailsPage .page {
+  width: 90%;
+}
+.itemDetailsPage .page .item {
+  width: 100%;
+  padding: 5px;
+  justify-content: space-evenly;
+}
+.itemDetailsPage .page .item .imgPart {
+  width: 35em;
+  height: 20em;
+  justify-content: space-evenly;
+}
+.itemDetailsPage .page .item .imgPart .imgSel {
+  width: 55px;
+}
+.itemDetailsPage .page .item .imgPart .imgSel .imgs {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: #fff 3px solid;
+  background: var(--bg-color);
+}
+.itemDetailsPage .page .item .imgPart .imgSel .imgs img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.itemDetailsPage .page .item .imgPart img {
+  cursor: pointer;
+  border-radius: 7px;
+  width: 30em;
+  height: 20em;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.itemDetailsPage .page .item .detailsPart {
+  border-radius: 7px;
+  height: 20em;
+  background: #fff;
+  width: 38em;
+}
+.itemDetailsPage .page .item .detailsPart .categoryS span {
+  margin-right: 10px;
+  padding: 2px;
+  background-color: var(--bg-color);
+  border-radius: 3px;
+}
+.itemDetailsPage .page .item .detailsPart .detail {
+  margin: 8px;
+}
+.itemDetailsPage .page .item .detailsPart .detail .disc {
+  border-radius: 8px;
+  font-size: 15px;
+  margin: 7px 0;
+  width: 100%;
+  overflow-y: scroll;
+  height: 7rem;
+  padding: 5px;
+}
+.itemDetailsPage .page .item .detailsPart .detail h3 {
+  font-weight: 300;
+  font-size: 20px;
+}
+.itemDetailsPage .page .item .detailsPart .detail h3 del {
+  color: gray;
+}
+.itemDetailsPage .page .item .detailsPart .detail h3 .cPrice {
+  margin-left: 10px;
+  color: #000;
+}
+.itemDetailsPage .page .item .detailsPart .detail h3 .offer {
+  margin-left: 20px;
+  color: var(--green-color);
+}
+.itemDetailsPage .page .item .detailsPart .detail .addtoCart {
+  width: 100%;
+  margin: 20px 0;
+}
+.itemDetailsPage .page .item .detailsPart .detail .addtoCart .btn {
+  cursor: pointer;
+  height: 30px;
+  width: 160px;
+  background-color: rgb(128, 74, 182);
+  text-align: center;
+}
+.itemDetailsPage .page .item .detailsPart .detail .addtoCart .btn:hover {
+  background-color: rgb(155, 111, 199);
+}
+.itemDetailsPage .page .reviews {
+  margin-top: 20px;
+  width: 90%;
+}
+.itemDetailsPage .page .reviews h1 {
+  border-bottom: 2px solid #fff;
+}
+.itemDetailsPage .page .reviews .addReview {
+  width: 90%;
+  margin: 10px 0;
+}
+.itemDetailsPage .page .reviews .addReview .addFb {
+  background-color: #fff;
+  min-height: 100px;
+  width: 90%;
+  margin: 10px 0;
+  border-radius: 7px;
+  padding: 5px;
+}
+.itemDetailsPage .page .reviews .addReview .addFb .texts {
+  width: 85%;
+}
+.itemDetailsPage .page .reviews .addReview .addFb .texts .Is {
+  justify-content: space-between;
+}
+.itemDetailsPage .page .reviews .addReview .addFb .texts .stars {
+  margin-right: 10px;
+}
+.itemDetailsPage .page .reviews .addReview .addFb .texts .stars .star {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 3px;
+}
+.itemDetailsPage .page .reviews .addReview .addFb .texts input {
+  border-radius: 3px;
+  width: 100px;
+  outline: none;
+  border: none;
+  margin: 10px;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: text;
+  border-bottom: 1px solid black;
+}
+.itemDetailsPage .page .reviews .addReview .addFb .texts textarea {
+  font-size: 16px;
+  padding: 5px;
+  cursor: text;
+  border-radius: 3px;
+  border: 1px solid black;
+  outline: none;
+  min-height: 80px;
+  max-height: 80px;
+  min-width: 95%;
+  max-width: 95%;
+  margin: 10px;
+}
+.itemDetailsPage .page .reviews .addReview .addFb .btnS {
+  cursor: pointer;
+  background-color: var(--green-color);
+  height: 50px;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.itemDetailsPage .page .reviews .reviewss {
+  width: 90%;
+}
+.itemDetailsPage .page .reviews .reviewss .review {
+  width: 420px;
+  border-radius: 7px;
+  background-color: #fff;
+  margin: 10px;
+}
+.itemDetailsPage .page .reviews .reviewss .review .img {
+  width: 90px;
+  aspect-ratio: 1/1;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+.itemDetailsPage .page .reviews .reviewss .review .img img {
+  width: 90px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.itemDetailsPage .page .reviews .reviewss .review .rr .top {
+  margin: 0 10px;
+  justify-content: space-between;
+}
+.itemDetailsPage .page .reviews .reviewss .review .rr .top .star .ratedStar {
+  color: gold;
+}
+.itemDetailsPage .page .reviews .reviewss .review .rr .top .star .unratedStar {
+  color: gray;
+}
+.itemDetailsPage .page .reviews .reviewss .review .rr .feedb {
+  margin: 5px 10px;
+  min-height: 60px;
+  width: 300px;
+  font-size: 14px;
+}
+.itemDetailsPage .page .reviews .reviewss .review .rr .date {
+  font-size: 12px;
+  text-align: right;
+}/*# sourceMappingURL=ItemDetail.css.map */

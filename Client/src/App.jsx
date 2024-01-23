@@ -16,6 +16,7 @@ import Contact from "./Page/Contact/Contact";
 import DishEditPage from "./Page/DishEditPage/DishEditPage";
 import AddDish from "./Page/AddDish/AddDish";
 import Dashboard from "./Page/Admin/Dashboard/dashboard";
+import ItemDetail from "./Page/ItemDetail/ItemDetail";
 
 function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -32,7 +33,8 @@ function App() {
           <Route excat path="/" element={<Home />} />
           <Route excat path="/about" element={<About />} />
           <Route excat path="/menu" element={<Menu />} />
-          <Route excat path="/dishPage/:_id" element={<DishEditPage />} />
+          <Route excat path="/menu/item/:_id" element={<ItemDetail />} />
+          <Route excat path="/edit/item/:_id" element={<DishEditPage />} />
           <Route excat path="/Book-Table" element={<BookATable />} />
           <Route excat path="/services" element={<Services />} />
           <Route excat path="/contact" element={<Contact />} />

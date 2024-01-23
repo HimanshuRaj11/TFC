@@ -8,23 +8,31 @@ const MenuCard = ({dish}) => {
 
   const selling = dish?.price-dish?.discount_amount
   const image = dish?.image
+  const Rating = dish?.Ratings
   const selling_price = selling.toFixed(2)
+
+ 
+
     return (
         <div data-aos="fade-up">
-              <NavLink to={`/dishPage/${dish?._id}`} >
+              <NavLink to={`/menu/item/${dish?._id}`} >
               <div className="menu-card light-comp">
 
                 <div className="img">
-                  <span className="rates center">
-                    {" "}
-                    <h3>4</h3> <AiFillStar className="star" />{" "}
+                  <span>
+                    
+                    {
+                      Rating!=0?<span className="rates center"> <h3>{Rating}</h3> <AiFillStar className="star" /></span>:""
+                    }
                   </span>
                   <img
                     src={`${image?image:dummy_image}`}
                     alt=""
                   />
+                  {
+                    dish?.special_offer?<span className="special-offer">Special Offer</span>:""
+                  }
                   
-                  <span className="special-offer">Special Offer</span>
                 </div>
 
                 

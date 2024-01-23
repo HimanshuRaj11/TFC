@@ -1,0 +1,248 @@
+.itemDetailsPage{
+    width: 100%;
+    margin-top: 72px;
+    position: relative;
+    path,a,svg{
+        cursor: pointer;
+    }
+    .edit{
+        display: flex;
+        float: right;
+        background-color: #a8a6a6c5;
+        padding: 3px;
+        border-radius: 4px;
+        border: 1px solid rgb(90, 89, 89);
+        position: absolute;
+        font-size: 25px;
+        top: 10px;
+        right: 30px;
+        cursor: pointer;
+    }
+
+    .page{
+        width: 90%;
+        
+        .item{
+            width: 100%;
+            padding: 5px;
+            justify-content: space-evenly;
+            .imgPart{
+                width: 35em;
+                height: 20em;
+                justify-content: space-evenly;
+                .imgSel{
+                    width: 55px;
+                    .imgs{
+                        height: 50px;
+                        width: 50px;
+                        margin: 5px;
+                        cursor: pointer;
+                        border-radius: 2px;
+                        border: #fff 3px solid;
+                        background: var(--bg-color);
+
+                        img{
+                            height: 50px;
+                            width: 50px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                img{
+                    cursor: pointer;
+                    border-radius: 7px;
+                    width: 30em;
+                    height: 20em;
+                    overflow: hidden;
+                    object-fit: cover;
+                }
+            }
+            .detailsPart{
+                border-radius: 7px;
+                height: 20em;
+                background: #fff;
+                width: 38em;
+                .categoryS{
+                    span{
+                        margin-right: 10px;
+                        padding: 2px;
+                        background-color: var(--bg-color);
+                        border-radius: 3px;
+                        
+                    }
+                }
+                .detail{
+                    margin: 8px;
+
+                    .disc{
+                        border-radius: 8px;
+                        font-size: 15px;
+                        margin: 7px 0;
+                        width: 100%;
+                        overflow-y: scroll;
+                        height: 7rem;
+                        padding: 5px;
+                    }
+                    h3{
+                        font-weight: 300;
+                        font-size: 20px;
+                        del{
+                            color: gray;
+                        }
+                        .cPrice{
+                            margin-left: 10px;
+                            color: #000;
+                        }
+                        .offer{
+                            margin-left: 20px;
+                            color:var(--green-color)
+                        }
+                    }
+
+                    .addtoCart{
+                        width: 100%;
+                        margin: 20px 0;
+                        .btn{
+                            cursor: pointer;
+                            height: 30px;
+                            width: 160px;
+                            background-color: rgb(128, 74, 182);
+                            text-align: center;
+                            
+                            &:hover{
+                                
+                                background-color: rgb(155, 111, 199);
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        .reviews{
+            margin-top: 20px;
+            width: 90%;
+
+            h1{
+                border-bottom: 2px solid #fff;
+            }
+            .addReview{
+                width: 90%;
+                margin: 10px 0;
+                .addFb{
+                    background-color: #fff;
+                    min-height: 100px;
+                    width: 90%;
+                    margin: 10px 0;
+                    border-radius: 7px;
+                    padding: 5px;
+
+                    .texts{
+                        width: 85%;
+                        .Is{
+                            justify-content: space-between;
+                        }
+                        .stars{
+                            margin-right: 10px;
+                            .star{
+                                cursor: pointer;
+                                font-size:20px ;
+                                margin: 0 3px;
+                            }
+                        }
+                        input{
+                            border-radius: 3px;
+                            width: 100px;
+                            outline: none;
+                            border: none;
+                            margin: 10px;
+                            font-size: 16px;
+                            padding: 5px;
+                            border-radius: 5px;
+                            cursor: text;
+                            border-bottom: 1px solid black;
+                        }
+                        textarea{
+                            font-size: 16px;
+                            padding: 5px;
+                            cursor: text;
+                            border-radius: 3px ;
+                            border: 1px solid black;
+                            outline: none;
+                            min-height: 80px;
+                            max-height: 80px;
+                            min-width:95%;
+                            max-width: 95%;
+                            margin: 10px;
+                        }
+                    }
+                    .btnS{
+                        cursor: pointer;
+                        background-color: var(--green-color);
+                        height: 50px;
+                        padding: 12px;
+                        border: none;
+                        outline: none;
+                        border-radius: 10px;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .reviewss{
+                width: 90%;
+
+                .review{
+                    width: 420px;
+                    border-radius: 7px;
+                    background-color: #fff;
+                    margin: 10px;
+                    
+                    .img{
+                        width:90px;
+                        aspect-ratio: 1/1;
+                        padding: 2px;
+                        border-radius: 50%;
+                        background-color: var(--bg-color);
+                        overflow: hidden;
+                        img{
+                            width:90px;
+                            aspect-ratio: 1/1;
+                            object-fit: contain;
+
+                        }
+                    }
+                    
+                    .rr{
+                        .top{
+                            margin: 0 10px;
+                            justify-content: space-between;
+                            .star{
+                                .ratedStar{
+                                        color: gold;
+                                        
+                                }
+                                .unratedStar{
+                                    color: gray;
+                                }
+                            }
+                        }
+                        .feedb{
+                            margin: 5px 10px;
+                            min-height: 60px;
+                            width: 300px;
+                            font-size: 14px;
+                        }
+                        .date{
+                            font-size: 12px;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

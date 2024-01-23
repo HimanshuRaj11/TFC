@@ -1,29 +1,165 @@
-.DishPage {
+.itemDetailsPage {
   width: 100%;
-  margin-top: 70px;
+  margin-top: 72px;
+  height: auto;
 }
-.DishPage .form_row input, .DishPage .form_row select {
-  width: 20em;
+.itemDetailsPage .page {
+  width: 90%;
+  height: auto;
+}
+.itemDetailsPage .page .item {
+  width: 100%;
   padding: 5px;
-  margin: 10px;
+  justify-content: space-evenly;
 }
-.DishPage .form_row textarea {
-  max-width: 20em;
-  min-width: 20em;
-  min-height: 15em;
-  max-height: 15em;
-  padding: 5px;
-  margin: 10px;
+.itemDetailsPage .page .item .imgPart {
+  width: 35em;
+  height: 20em;
+  justify-content: space-evenly;
 }
-.DishPage button {
+.itemDetailsPage .page .item .imgPart .imgSel {
+  width: 55px;
+}
+.itemDetailsPage .page .item .imgPart .imgSel .imgs {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
   cursor: pointer;
-  width: 20em;
-  border: none;
-  margin: 10px;
+  border-radius: 2px;
+  border: #fff 3px solid;
+  background: var(--bg-color);
+}
+.itemDetailsPage .page .item .imgPart .imgSel .imgs .smallimg {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.itemDetailsPage .page .item .imgPart .bigimg {
+  cursor: pointer;
+  border-radius: 7px;
+  width: 30em;
+  height: 20em;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.itemDetailsPage .page .item .DetailsPart {
+  border-radius: 7px;
+  height: auto;
+  background: #fff;
+  width: 38em;
+}
+.itemDetailsPage .page .item .DetailsPart .detail {
+  margin: 8px;
+}
+.itemDetailsPage .page .item .DetailsPart .detail input[type=text] {
   outline: none;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: 600;
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding: 3px;
+  width: 20em;
+  font-size: 15px;
+}
+.itemDetailsPage .page .item .DetailsPart .detail .showCategory {
+  width: 100%;
+  height: 70px;
+  overflow-y: scroll;
+  margin: 10px 0;
+  border: 1px solid gray;
   border-radius: 5px;
-  background-color: rgb(15, 197, 15);
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.itemDetailsPage .page .item .DetailsPart .detail .showCategory::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+.itemDetailsPage .page .item .DetailsPart .detail .showCategory::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.itemDetailsPage .page .item .DetailsPart .detail .showCategory::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+.itemDetailsPage .page .item .DetailsPart .detail .showCategory::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.itemDetailsPage .page .item .DetailsPart .detail .showCategory .category {
+  margin: 0 5px;
+  height: 20px;
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 5px;
+}
+.itemDetailsPage .page .item .DetailsPart .detail .showCategory .category .catName {
+  margin: 5px;
+}
+.itemDetailsPage .page .item .DetailsPart .detail .showCategory .category .catAdd {
+  text-align: center;
+  background-color: #928f8f;
+  width: 30px;
+  cursor: pointer;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 700;
+}
+.itemDetailsPage .page .item .DetailsPart .detail .disc {
+  border-radius: 8px;
+  font-size: 15px;
+  margin: 7px 0;
+  width: 100%;
+  height: 7rem;
+  padding: 5px;
+}
+.itemDetailsPage .page .item .DetailsPart .detail .disc textarea {
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid gray;
+  padding: 5px;
+  min-width: 95%;
+  max-width: 95%;
+  font-size: 15px;
+  min-height: 5rem;
+}
+.itemDetailsPage .page .item .DetailsPart .detail h3 {
+  font-weight: 300;
+  font-size: 20px;
+}
+.itemDetailsPage .page .item .DetailsPart .detail h3 .cPrice {
+  margin-left: 10px;
+  color: #000;
+}
+.itemDetailsPage .page .item .DetailsPart .detail h3 .cPrice input {
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding: 3px;
+  font-size: 15px;
+}
+.itemDetailsPage .page .item .DetailsPart .detail h3 .offer {
+  margin-left: 20px;
+  color: var(--green-color);
+}
+.itemDetailsPage .page .item .DetailsPart .detail h3 .offer input {
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding: 3px;
+  font-size: 15px;
+}
+.itemDetailsPage .save {
+  width: 100%;
+  margin: 20px 0;
+}
+.itemDetailsPage .save .btn {
+  cursor: pointer;
+  height: 30px;
+  width: 160px;
+  background-color: rgb(128, 74, 182);
+  text-align: center;
+}
+.itemDetailsPage .save .btn:hover {
+  background-color: rgb(155, 111, 199);
 }/*# sourceMappingURL=AddDish.css.map */

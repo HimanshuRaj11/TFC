@@ -66,6 +66,13 @@
   width: 98%;
   cursor: pointer;
   justify-content: space-between;
+  padding: 2px;
+  border-radius: 10px;
+  transition: all ease 1s;
+}
+.BookATable .tableDesine .room .tables .row .col1:hover {
+  background-color: #ccc7c7;
+  scale: 1.02;
 }
 .BookATable .tableDesine .room .tables .row .col1 .table {
   width: 38%;
@@ -81,6 +88,13 @@
   cursor: pointer;
   height: 8em;
   width: 98%;
+  padding: 2px;
+  border-radius: 10px;
+  transition: all ease 1s;
+}
+.BookATable .tableDesine .room .tables .row .col2:hover {
+  background-color: #ccc7c7;
+  scale: 1.02;
 }
 .BookATable .tableDesine .room .tables .row .col2 .table {
   width: 38%;

@@ -8,17 +8,20 @@ const DishesSchema = new mongoose.Schema({
     discount_percent:{type: Number},
     discount_amount:{type: Number},
     image:{type: String},
-    category:{type: schema.Types.ObjectId, ref: 'Menu'},
+    categorys:[{
+            category:{type:String},
+            _id:{type: schema.Types.ObjectId, ref: 'Category'},
+        } ],
     Ingredients:{type:String},
     Cuisine:{type:String},
     inStock:{type:Boolean, default:true},
     isVej:{type:Boolean, default:true},
     special_offer:{type:Boolean, default:false},
-    Ratings:{type:Number},
+    Ratings:{type:Number,default:0},
     Reviews:[{
         people:{type:String, require:true},
         rating:{type:Number, require:true},
-        comment:{type:String, require:true},
+        comment:{type:String},
         time : { type : Date, default: Date.now() }
     }],
 })

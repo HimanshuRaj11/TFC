@@ -25,13 +25,17 @@ app.get("/", (req, res) => {
   res.send("Server is Running...");
 });
 
-// Routers
+// ---------Routers-------
+
 const CategoryRouter = require("./Routes/Category.route")
 app.use("/category/", CategoryRouter)
 
 const DishesRouter = require("./Routes/Dishes.route");
 app.use("/dish", DishesRouter)
 
+
+
+// -----------Server Listining---------
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server is Running on port: ${port}`);

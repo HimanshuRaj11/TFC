@@ -33,8 +33,8 @@ exports.RemoveCategory = async(req, res)=>{
 exports.editCategory = async(req, res)=>{
     try {
         const {_id} = req.params;
-        const {category} = req.body;
-        await Category.findByIdAndUpdate({_id},{category}).then((cate)=>{
+        const {category,isTrending} = req.body;
+        await Category.findByIdAndUpdate({_id},{category,isTrending}).then((cate)=>{
             return res.status(201).json({msg:"Category Updated Successfully" ,cate })
         })
 

@@ -1,10 +1,35 @@
 import "./Home.css";
 import { GiCook } from "react-icons/gi";
-
 import { BsArrowBarRight } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import MenuCard from "../../Components/Menu-Card/MenuCard";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { fetchCategory } from "../../Redux/Slice/Category.slice";
+import {fetchCategoryDishes} from "../../Redux/Slice/Dishes.slice";
+
 const Home = () => {
+  const dispatch = useDispatch();
+
+  const Category = useSelector((state) => ({ ...state.Category }));
+  const CategoryData = Category?.Category?.category;
+
+  const Dishes = useSelector((state) => ({ ...state.Dishes }));
+  const DishData = Dishes?.Dishes?.dishes;
+
+  const [ActiveCourse, setActiveCourse] = useState("TFC Special");
+
+  const setActive = (p) => {
+    setActiveCourse(p);
+  };
+  useEffect(() => {
+    dispatch(fetchCategory());
+    dispatch(fetchCategoryDishes({ category:ActiveCourse }));
+  }, [ActiveCourse]);
+  
+  console.log(DishData);
+  
+
   return (
     <>
       <div className="Home column j-center">
@@ -29,7 +54,6 @@ const Home = () => {
             </p>
           </div>
           <div className="serv center wrap">
-
             <div className="list row a-center light-comp">
               <div className="list-icon center">
                 <GiCook className="icon" />{" "}
@@ -62,7 +86,6 @@ const Home = () => {
                 Ut enim ad minim veniam, quis nostrud exer.
               </p>
             </div>
-          
           </div>
         </div>
         <div className="cont2-img">
@@ -80,25 +103,34 @@ const Home = () => {
             <h3 className="d-sub-text">Our Top Menu</h3>
           </div>
           <div className="types center">
-            <span className="active" id="Special">
-              Special
-            </span>
-            <span id="Desserts">Desserts</span>
-            <span id="Beverages">Beverages</span>
+            {CategoryData?.filter((data) => {
+              return data.isTrending === true;
+            }).map((data, i) => {
+              return (
+                <span
+                  key={i}
+                  className={`${ActiveCourse != data.category ? "" : "active"}`}
+                  id={`${data._id}`}
+                  onClick={() => setActive(data.category)}
+                >
+                  {data.category}
+                </span>
+              );
+            })}
           </div>
           <div className="topR-menu center wrap">
-            
-          <MenuCard/>
-          <MenuCard/>
-          <MenuCard/>
-          <MenuCard/>
-          <MenuCard/>
-          <MenuCard/>
-          
+            {DishData?.map((dish, i) => {
+              return <MenuCard key={i + 1} dish={dish} />;
+            })}
           </div>
 
           <div className="all-menu center">
-            <NavLink className={`center`}> <span>View More</span>  <BsArrowBarRight className="arrow-icon" /> </NavLink>
+            <NavLink className={`center`} to="/menu">
+              {" "}
+              <span>
+                View More
+              </span> <BsArrowBarRight className="arrow-icon" />{" "}
+            </NavLink>
           </div>
         </div>
       </div>
@@ -106,9 +138,9 @@ const Home = () => {
 
       <div className="container4 center">
         <div className="contain4 center">
-            <NavLink className="book-a-table">
-                <h1>Book Your Table</h1>
-            </NavLink>
+          <NavLink className="book-a-table" to="/Book-Table">
+            <h1>Book Your Table</h1>
+          </NavLink>
         </div>
       </div>
     </>

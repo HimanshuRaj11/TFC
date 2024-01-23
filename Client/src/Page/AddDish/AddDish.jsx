@@ -8,6 +8,18 @@ const AddDish = () => {
   const Category = useSelector((state) => ({ ...state.Category }));
   const CategoryData = Category?.Category?.category;
 
+
+  const[ formCategory, setFormcategory] = useState([])
+  const addCtegory = (category, _id)=>{
+      setFormcategory(currentData=>[...currentData,{category, _id} ])
+  }
+
+  const deleteCategory = (value) => {
+    setFormcategory(oldValues => {
+      return oldValues.filter((category)=>category._id!=value)
+    })
+  }
+
   const [formData, setFormData] = useState({
     image: "",
     dish_Name: "",
@@ -15,10 +27,8 @@ const AddDish = () => {
     price: "",
     discount_percent: "",
     discount_amount: "",
-    category: "",
     Ingredients: "",
     Cuisine: "",
-    
   });
   const handelChange = (e) => {
     const { name, value } = e.target;
@@ -27,128 +37,186 @@ const AddDish = () => {
     });
   };
 
-
   const [checkBox, setCheckBox] = useState({
     isVej: false,
     inStock: false,
-  })
-  const handelCheck = (e)=>{
-    const {name,checked} = e.target
+  });
+  const handelCheck = (e) => {
+    const { name, checked } = e.target;
     setCheckBox({
-        ...checkBox,
-        [name]: checked,
-      });
-    
-  }
+      ...checkBox,
+      [name]: checked,
+    });
+  };
 
   const saveData = async () => {
-    await axios.post(`http://localhost:8000/dish/AddDishes`, {formData,checkBox});
+    await axios.post(`http://localhost:8000/dish/AddDishes`, {
+      formData,
+      checkBox,
+      formCategory
+    });
     setFormData({
-        image: "",
-        dish_Name: "",
-        description: "",
-        price: "",
-        discount_percent: "",
-        discount_amount: "",
-        category: "",
-        Ingredients: "",
-        Cuisine: "",
-       
-    })
+      image: "",
+      dish_Name: "",
+      description: "",
+      price: "",
+      discount_percent: "",
+      discount_amount: "",
+      Ingredients: "",
+      Cuisine: "",
+    });
     setCheckBox({
-        isVej: false,
-        inStock: false,
-    })
+      isVej: false,
+      inStock: false,
+    });
+    setFormcategory([])
   };
 
   useEffect(() => {
     dispatch(fetchCategory());
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="DishPage d-flex column center">
-      <div className="form_inps row">
-        <div className="form_row column">
-          <input
-            type="text"
-            name="image"
-            onChange={handelChange}
-            value={formData?.image}
-            placeholder="Image"
-          />
-          <input
-            type="text"
-            name="dish_Name"
-            onChange={handelChange}
-            value={formData?.dish_Name}
-            placeholder="Name"
-          />
-          <textarea
-            name="description"
-            onChange={handelChange}
-            value={formData?.description}
-            placeholder="Description"
-          />
-        </div>
+    <div className="itemDetailsPage center column">
+      <div className="page center column">
+        <div className="item d-flex row center">
+          <div className="imgPart row ">
+            <div className="imgSel column center">
+              <div className="imgs">
+                <input
+                  type="text"
+                  className="smallimg"
+                  name="image"
+                  onChange={handelChange}
+                  value={formData?.image}
+                />
+              </div>
+            </div>
+            {/* big image */}
+            <input
+              className="bigimg"
+              type="text"
+              name="image"
+              onChange={handelChange}
+              value={formData?.image}
+            />
+          </div>
 
-        <div className="form_row column">
-          <input
-            type="number"
-            name="price"
-            onChange={handelChange}
-            value={formData?.price}
-            placeholder="Price"
-          />
-          <input
-            type="number"
-            name="discount_percent"
-            onChange={handelChange}
-            value={formData?.discount_percent}
-            placeholder="Dishcount Percent"
-          />
-          <input
-            type="number"
-            name="discount_amount"
-            onChange={handelChange}
-            value={formData?.discount_amount}
-            placeholder="dis amount"
-          />
-          <select name="category" id="course-type" onChange={handelChange}>
-            <option value="" >None</option>
-            {CategoryData?.map((cate, i) => {
-              return (
-                <option value={`${cate._id}`} key={i + 1}>
-                  {cate.category}
-                </option>
-              );
-            })}
-          </select>
-          <input
-            type="text"
-            name="Ingredients"
-            onChange={handelChange}
-            value={formData?.Ingredients}
-            placeholder="Ingredients"
-          />
-          <input
-            type="text"
-            name="Cuisine"
-            onChange={handelChange}
-            value={formData?.Cuisine}
-            placeholder="Cuisine i.e Country"
-          />
-          <label htmlFor="isVej">IsVej
-          <input type="checkbox" name="isVej" checked={checkBox.isVej} onClick={handelCheck} onChange={handelCheck}/>
-          </label>
-          <label htmlFor="inStock">InStock
-          <input type="checkbox" name="inStock" checked={checkBox.inStock} onClick={handelCheck} onChange={handelCheck}/>
-          </label>
+          <div className="DetailsPart">
+            <div className="detail column">
+              <h2 className="font2">
+                <input
+                  type="text"
+                  name="dish_Name"
+                  onChange={handelChange}
+                  value={formData?.dish_Name}
+                  placeholder="Name"
+                />
+              </h2>
+              <div className="showCategory d-flex wrap a-center">
+                {formCategory?.map((cate, i) => {
+                  return (
+                    <>
+                      <div className="category row center" key={i}>
+                        <span className="catName">{cate?.category}</span>
+                        <h5 className="catAdd center" onClick={()=>deleteCategory(cate?._id)}> &#10006;</h5>
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
+              <div className="showCategory d-flex wrap a-center">
+                {CategoryData?.map((cate, i) => {
+                  return (
+                    <>
+                      <div className="category row center" key={i}>
+                        <span className="catName">{cate?.category}</span>
+                        <h5 className="catAdd center"onClick={()=>addCtegory(cate?.category,cate?._id)}>&#10010;</h5>
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
+
+              <div className="disc">
+                <textarea
+                  name="description"
+                  onChange={handelChange}
+                  value={formData?.description}
+                  placeholder="Description"
+                />
+              </div>
+              <div className="sDet">
+                <label htmlFor="isVej">
+                  IsVej
+                  <input
+                    type="checkbox"
+                    name="isVej"
+                    checked={checkBox.isVej}
+                    onClick={handelCheck}
+                    onChange={handelCheck}
+                  />
+                </label>
+                <label htmlFor="inStock">
+                  InStock
+                  <input
+                    type="checkbox"
+                    name="inStock"
+                    checked={checkBox.inStock}
+                    onClick={handelCheck}
+                    onChange={handelCheck}
+                  />
+                </label>
+
+                <input
+                  type="text"
+                  name="Ingredients"
+                  onChange={handelChange}
+                  value={formData?.Ingredients}
+                  placeholder="Ingredients"
+                />
+                <input
+                  type="text"
+                  name="Cuisine"
+                  onChange={handelChange}
+                  value={formData?.Cuisine}
+                  placeholder="Cuisine i.e Country"
+                />
+              </div>
+              <h3>
+                <span className="cPrice">
+                  {" "}
+                  &#8377;
+                  <input
+                    type="number"
+                    name="price"
+                    onChange={handelChange}
+                    value={formData?.price}
+                    placeholder="Price"
+                  />
+                </span>
+                <span className="offer">
+                  {" "}
+                  <input
+                    type="number"
+                    name="discount_percent"
+                    onChange={handelChange}
+                    value={formData?.discount_percent}
+                    placeholder="Dishcount Percent"
+                  />
+                  % OFF
+                </span>
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="btn_div">
-        <button type="submit" onClick={saveData}>
-          Add Dish
-        </button>
+      <div className="save center">
+        <div className="btn center" onClick={saveData}>
+          Save Dish
+        </div>
       </div>
     </div>
   );

@@ -32,10 +32,10 @@ export const DishSlice = createSlice({
       // })
   },
 });
-
+const Server_URL = import.meta.env.VITE_SERVER_URL;
 export const fetchAllDishes = createAsyncThunk("/fetchAll/dishes", async () => {
   try {
-    const res = await axios.get("http://localhost:8000/dish/fetchAllDishes");
+    const res = await axios.get(`${Server_URL}`+"dish/fetchAllDishes", {withCredentials:true});
     const data = res.data;
     return data;
   } catch (error) {
@@ -44,9 +44,8 @@ export const fetchAllDishes = createAsyncThunk("/fetchAll/dishes", async () => {
 });
 export const fetchCategoryDishes = createAsyncThunk("/fetchAll/dishes", async ({category}) => {
   try {
-    const res = await axios.get(`http://localhost:8000/dish/fetchCategoryDishes/${category}`);
+    const res = await axios.get(`${Server_URL}dish/fetchCategoryDishes/${category}`, {withCredentials:true});
     const data = res.data;
-   
     return data;
   } catch (error) {
     return error;

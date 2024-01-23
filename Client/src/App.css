@@ -10,9 +10,13 @@
   --bg-color: #E5E8E8;
 }
 
+input,textarea{
+  cursor: text;
+}
 /* ==========FONTS============ */
 *{
   font-family: "Roboto", sans-serif;
+  cursor: default;
 }
 a{
   color: inherit;
@@ -125,6 +129,7 @@ a{
   display: flex;
   justify-content: center;
 }
+
 .center{
   display: flex;
   align-items: center;

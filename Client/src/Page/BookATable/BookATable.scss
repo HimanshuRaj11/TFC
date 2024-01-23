@@ -70,10 +70,14 @@
                         width: 98%;
                         cursor: pointer;
                         justify-content: space-between;
+                        padding: 2px;
+                        border-radius: 10px;
+                        transition: all ease 1s;
 
-                        // &:hover{
-                        //     border: 1px solid #ccc;
-                        // }
+                        &:hover{
+                            background-color: #ccc7c7;
+                            scale: 1.02;
+                        }
                         // .chairs {
                         //     height: 12em;
                         //     width: 30%;
@@ -106,6 +110,14 @@
                         cursor: pointer;
                         height: 8em;
                         width: 98%;
+                        padding: 2px;
+                        border-radius: 10px;
+                        transition: all ease 1s;
+
+                        &:hover{
+                            background-color: #ccc7c7;
+                            scale: 1.02;
+                        }
                         .table {
                             width: 38%;
                             height: 8em;
