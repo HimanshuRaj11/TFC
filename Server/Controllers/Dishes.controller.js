@@ -30,7 +30,6 @@ exports.AddDishes = async (req, res) => {
       return res.status(201).json({ msg: "Dish Added Successfully", Dish });
     });
   } catch (error) {
-    console.log(error);
     return res.status(503).json({ msg: "Internal Server Error", error });
   }
 };
@@ -78,10 +77,8 @@ exports.EditDishes = async (req, res) => {
         return res.status(201).json({ msg: "Dish Updated Successfully", Dish });
       })
       .catch((e) => {
-        console.log(e);
       });
   } catch (error) {
-    console.log(error);
     return res.status(503).json({ msg: "Internal Server Error", error });
   }
 };
@@ -99,7 +96,6 @@ exports.fetchCategoryDishes = async (req, res) => {
   try {
     const { category } = req.params;
     await Dishes.find({categorys: {$elemMatch: {category}}}).then((dishes) => {
-      console.log(dishes);
       return res.status(201).json({ dishes });
     });
   } catch (error) {
@@ -114,7 +110,6 @@ exports.fetchDishById = async (req, res) => {
       return res.status(200).json({ dish });
     });
   } catch (error) {
-    console.log(error);
     return res.status(503).json({ msg: "Internal Server Error", error });
   }
 };
@@ -136,7 +131,6 @@ exports.AddReviews = async (req, res) => {
         return res.status(503).json({ msg: "Something Went Wrong..", error });
       });
   } catch (error) {
-    console.log(error);
     return res.status(503).json({ msg: "Internal Server Error", error });
   }
 };
@@ -155,7 +149,6 @@ exports.updateRetings = async (req, res) => {
     await Dishes.findByIdAndUpdate({ _id }, { Ratings });
     return;
   } catch (error) {
-    console.log(error);
     return res.status(503).json({ msg: "Internal Server Error", error });
   }
 };
@@ -165,7 +158,6 @@ exports.getReviews = async (req, res) => {
     const { _id } = req.params;
     const dish = await Dishes.findById({ _id }).then((dish) => {});
   } catch (error) {
-    console.log(error);
     return res.status(503).json({ msg: "Internal Server Error", error });
   }
 };
