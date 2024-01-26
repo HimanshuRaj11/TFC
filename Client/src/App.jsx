@@ -15,7 +15,6 @@ import Services from "./Page/Services/Services";
 import Contact from "./Page/Contact/Contact";
 import DishEditPage from "./Page/DishEditPage/DishEditPage";
 import AddDish from "./Page/AddDish/AddDish";
-import Dashboard from "./Page/Admin/Dashboard/dashboard";
 import ItemDetail from "./Page/ItemDetail/ItemDetail";
 
 function App() {
@@ -39,7 +38,6 @@ function App() {
           <Route excat path="/services" element={<Services />} />
           <Route excat path="/contact" element={<Contact />} />
           <Route excat path="/Add-Dish" element={<AddDish />} />
-          {/* <Route excat path="/dashboard" element={<Dashboard />} /> */}
         </Routes>
       </div>
       {mobileMenu && <MNavbar setMobileMenu={setMobileMenu} />}
