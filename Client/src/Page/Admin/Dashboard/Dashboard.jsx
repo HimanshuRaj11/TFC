@@ -5,7 +5,7 @@ const Dashboard = () => {
     return (
         <div className='dashboard' >
 
-            <div className="Add-btn"><NavLink to={"/Add-Dish"}> + Add Dish</NavLink></div>
+            <div className="Add-btn"><NavLink to="/Add-Dish"> + Add Dish</NavLink></div>
             
         </div>
     );
