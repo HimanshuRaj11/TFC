@@ -39,7 +39,7 @@ function App() {
           <Route excat path="/services" element={<Services />} />
           <Route excat path="/contact" element={<Contact />} />
           <Route excat path="/Add-Dish" element={<AddDish />} />
-          <Route excat path="/dashboard" element={<Dashboard />} />
+          {/* <Route excat path="/dashboard" element={<Dashboard />} /> */}
         </Routes>
       </div>
       {mobileMenu && <MNavbar setMobileMenu={setMobileMenu} />}
