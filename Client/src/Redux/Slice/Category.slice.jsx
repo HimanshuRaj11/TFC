@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
+const serverUrl = import.meta.env.VITE_SERVER_URL
 // creating Category Slice
 export const categorySlice = createSlice({
   name: "Category",
@@ -29,7 +29,7 @@ export const categorySlice = createSlice({
 export const fetchCategory = createAsyncThunk("/fetchCategory", async () => {
   try {
     const res = await axios.get(
-      "http://localhost:8000/category/fetchCategory",
+      `${serverUrl}category/fetchCategory`,
       { withCredentials: true }
     );
     const data = res.data;
