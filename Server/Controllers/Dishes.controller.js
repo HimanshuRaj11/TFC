@@ -124,13 +124,12 @@ exports.AddReviews = async (req, res) => {
       { $push: { Reviews: { people, comment, rating } } }
     )
       .then((Reviews) => {
-        return res.status(201).json({ Reviews });
+        return res.status(201).json({ Reviews, msg:"Feedback added successfully" });
       })
       .catch((error) => {
-        log.error(error);
         return res.status(503).json({ msg: "Something Went Wrong..", error });
       });
-  } catch (error) {
+    } catch (error) {
     return res.status(503).json({ msg: "Internal Server Error", error });
   }
 };

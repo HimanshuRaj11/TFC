@@ -1,0 +1,48 @@
+.itemDetailsSkeleton .anim {
+  background: rgb(203, 178, 178);
+  background: linear-gradient(90deg, rgba(203, 178, 178, 0) 0%, rgba(217, 206, 206, 0.8610428371) 50%, rgba(163, 162, 162, 0) 100%);
+  animation: skeletonLoad 2s ease infinite;
+  border-radius: 10px;
+  margin: 3px;
+}
+.itemDetailsSkeleton .imgPart .Simg {
+  animation: skeletonLoad 10s ease infinite;
+  height: 50px;
+  width: 50px;
+}
+.itemDetailsSkeleton .imgPart .img {
+  height: 315px;
+  width: 400px;
+}
+.itemDetailsSkeleton .detailsPart .detail .ln {
+  height: 22px;
+  width: 317px;
+}
+.itemDetailsSkeleton .detailsPart .detail .bl {
+  width: 517px;
+  height: 180px;
+}
+.itemDetailsSkeleton .detailsPart .detail .dln {
+  width: 500px;
+  height: 25px;
+}
+.itemDetailsSkeleton .reviews {
+  margin-top: 100px !important;
+}
+.itemDetailsSkeleton .reviews .revBox {
+  height: 120px;
+  margin: 20px;
+  width: 500px;
+}
+
+@keyframes skeletonLoad {
+  0% {
+    background-position: -400px;
+  }
+  50% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 400px;
+  }
+}/*# sourceMappingURL=Skeleton.css.map */

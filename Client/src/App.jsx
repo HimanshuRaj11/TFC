@@ -16,7 +16,9 @@ import Contact from "./Page/Contact/Contact";
 import DishEditPage from "./Page/DishEditPage/DishEditPage";
 import AddDish from "./Page/AddDish/AddDish";
 import ItemDetail from "./Page/ItemDetail/ItemDetail";
-import MenuCardSkleton from "./Components/Menu-Card/MenuCardSkleton";
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -28,6 +30,7 @@ function App() {
   return (
     <div className="App light-bg">
       <Navbar />
+      <ToastContainer />
       <div className="container">
         <Routes>
           <Route excat path="/" element={<Home />} />
@@ -39,7 +42,6 @@ function App() {
           <Route excat path="/services" element={<Services />} />
           <Route excat path="/contact" element={<Contact />} />
           <Route excat path="/Add-Dish" element={<AddDish />} />
-          <Route excat path="/skeleton" element={<MenuCardSkleton />} />
 
         </Routes>
       </div>
