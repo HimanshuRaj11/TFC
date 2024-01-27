@@ -140,14 +140,17 @@ exports.updateRetings = async (req, res) => {
     const dish = await Dishes.findById({ _id });
     const { Reviews } = dish;
     const ReviewsLength = Reviews.length;
-    let AllRating = 0;
-    Reviews.map((data, i) => {
-      AllRating += data.rating;
-    });
-    const Ratings = (AllRating / ReviewsLength).toFixed(1);
-    await Dishes.findByIdAndUpdate({ _id }, { Ratings });
-    return;
+    if(ReviewsLength!=0){
+      let AllRating = 0;
+      Reviews.map((data, i) => {
+        AllRating += data.rating;
+      });
+      const Ratings = (AllRating / ReviewsLength).toFixed(1);
+      await Dishes.findByIdAndUpdate({ _id }, { Ratings });
+      return;
+    }
   } catch (error) {
+    // console.log(error);
     return res.status(503).json({ msg: "Internal Server Error", error });
   }
 };
