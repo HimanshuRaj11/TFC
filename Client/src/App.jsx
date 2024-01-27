@@ -16,6 +16,7 @@ import Contact from "./Page/Contact/Contact";
 import DishEditPage from "./Page/DishEditPage/DishEditPage";
 import AddDish from "./Page/AddDish/AddDish";
 import ItemDetail from "./Page/ItemDetail/ItemDetail";
+import MenuCardSkleton from "./Components/Menu-Card/MenuCardSkleton";
 
 function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -23,10 +24,10 @@ function App() {
   useEffect(() => {
     AOS.init();
   }, []);
+  console.log(import.meta.env.VITE_SERVER_URL);
   return (
     <div className="App light-bg">
       <Navbar />
-
       <div className="container">
         <Routes>
           <Route excat path="/" element={<Home />} />
@@ -38,6 +39,8 @@ function App() {
           <Route excat path="/services" element={<Services />} />
           <Route excat path="/contact" element={<Contact />} />
           <Route excat path="/Add-Dish" element={<AddDish />} />
+          <Route excat path="/skeleton" element={<MenuCardSkleton />} />
+
         </Routes>
       </div>
       {mobileMenu && <MNavbar setMobileMenu={setMobileMenu} />}

@@ -7,6 +7,7 @@ import {
   fetchAllDishes,
   fetchCategoryDishes,
 } from "../../Redux/Slice/Dishes.slice";
+import MenuCardSkleton from "../../Components/Menu-Card/MenuCardSkleton";
 
 const Menu = () => {
   const dispatch = useDispatch();
@@ -15,8 +16,10 @@ const Menu = () => {
   const Category = useSelector((state) => ({ ...state.Category }));
   const CategoryData = Category?.Category?.category;
 
-  const Dishes = useSelector((state) => ({ ...state.Dishes }));
+  const {Dishes} = useSelector((state) => ({ ...state }));
   const DishData = Dishes?.Dishes?.dishes;
+  const loading = Dishes?.loading;
+  console.log(loading);
 
   useEffect(()=>{
     setAllDish(DishData)
@@ -48,7 +51,6 @@ const Menu = () => {
     });
     setAllDish(filterBySearch);
   };
-  console.log(AllDish);
 
   useEffect(() => {
     dispatch(fetchCategory());
@@ -88,9 +90,20 @@ const Menu = () => {
       </div>
 
       <div className="menus center wrap">
-        {AllDish?.map((dish, i) => {
-          return <MenuCard key={i + 1} dish={dish} />;
-        })}
+        {loading?(
+          <>
+        <MenuCardSkleton/>
+        <MenuCardSkleton/>
+        <MenuCardSkleton/>
+        <MenuCardSkleton/>
+        <MenuCardSkleton/>
+        <MenuCardSkleton/>
+          </>
+        ):
+        (AllDish?.map((dish, i) => {
+          return <MenuCard key={i + 1} dish={dish}/>;
+        }))
+        }
       </div>
     </div>
   );

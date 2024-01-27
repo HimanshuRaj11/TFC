@@ -27,8 +27,7 @@ const Home = () => {
     dispatch(fetchCategoryDishes({ category:ActiveCourse }));
   }, [ActiveCourse]);
   
-  console.log(DishData);
-  
+
 
   return (
     <>
