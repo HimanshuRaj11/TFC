@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const schema = mongoose.Schema;
-const DishesSchema = new mongoose.Schema({
 
+const DishesSchema = new mongoose.Schema({
     dish_Name:{type: String, require: true},
     description:{type: String, require: true},
     price:{type: Number, require: true},

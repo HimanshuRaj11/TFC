@@ -35,6 +35,9 @@ app.use("/category/", CategoryRouter)
 const DishesRouter = require("./Routes/Dishes.route");
 app.use("/dish", DishesRouter)
 
+const tableRouter = require("./Routes/Table.route");
+app.use("/table", tableRouter)
+
 
 
 // -----------Server Listining---------
