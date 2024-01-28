@@ -14,7 +14,7 @@
         },
         {
             "src": "/menu/item/:_id",
-            "dest": "/menu/item/:_id"
+            "dest": "/"
         },
         {
             "src": "/edit/item/:_id",
