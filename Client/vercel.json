@@ -1,40 +1,5 @@
 {
-    "routes":[
-        {
-            "src": "/",
-            "dest": "/"
-        },
-        {
-            "src": "/about",
-            "dest": "/"
-        },
-        {
-            "src": "/menu",
-            "dest": "/"
-        },
-        {
-            "src": "/menu/item/:_id",
-            "dest": "/"
-        },
-        {
-            "src": "/edit/item/:_id",
-            "dest": "/"
-        },
-        {
-            "src": "/Book-Table",
-            "dest": "/"
-        },
-        {
-            "src": "/contact",
-            "dest": "/"
-        },
-        {
-            "src": "/services",
-            "dest": "/"
-        },
-        {
-            "src": "/Add-Dish",
-            "dest": "/"
-        }
-    ]
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
 }
